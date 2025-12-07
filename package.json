@@ -1,0 +1,23 @@
+{
+	"name": "webcrawler",
+	"version": "1.0.0",
+	"main": "main.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"start": "node main.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/vangelissl/webcrawler.git"
+	},
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/vangelissl/webcrawler/issues"
+	},
+	"homepage": "https://github.com/vangelissl/webcrawler#readme",
+	"description": "",
+	"devDependencies": {
+		"jest": "^30.2.0"
+	}
+}
