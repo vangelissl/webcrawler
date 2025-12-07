@@ -13,4 +13,12 @@ test('normalizeURL trim slashes', () => {
 	const actual = normalizeURL(input);
 	const expected = 'blog.boot.dev/path';
 	expect(actual).toEqual(expected);
-})
+});
+
+test('normalizeURL capitals', () => {
+	const input = 'https://BLOG.boot.dev/path';
+	const actual = normalizeURL(input);
+	const expected = 'blog.boot.dev/path';
+	expect(actual).toEqual(expected);
+});
+
