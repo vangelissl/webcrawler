@@ -7,3 +7,10 @@ test('normalizeURL strip protocol', () => {
 	const expected = 'blog.boot.dev/path';
 	expect(actual).toEqual(expected);
 });
+
+test('normalizeURL trim slashes', () => {
+	const input = 'https://blog.boot.dev/path/';
+	const actual = normalizeURL(input);
+	const expected = 'blog.boot.dev/path';
+	expect(actual).toEqual(expected);
+})
