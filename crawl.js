@@ -12,7 +12,7 @@ async function crawlPage(currentURL) {
 		}
 
 		const contentType = resp.headers.get('content-type');
-		if (contentType !== 'text/html') {
+		if (!contentType.includes('text/html')) {
 			console.log(`non html response, content type: ${contentType} on page: ${currentURL}`);
 			return;
 		}
