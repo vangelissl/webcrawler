@@ -6,12 +6,16 @@ function getURLsFromHTML(htmlBody, baseURL) {
 	const urls = [];
 
 	for (const linkElement of linkElements) {
-		if (linkElement.href.slice(0, 1) === '/') {
-			console.log('yes')
-			urls.push(`${baseURL}${linkElement.href}`);
+		let url = linkElement.href;
+
+		url = url.slice(0, 1) === '/' ? `${baseURL}${url}` : url;
+
+		try{
+			normalizeURL(url);
+			urls.push(url);
 		}
-		else {
-			urls.push(linkElement.href);
+		catch(error){
+			continue;
 		}
 	}
 
